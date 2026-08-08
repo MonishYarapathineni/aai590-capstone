@@ -1,15 +1,32 @@
-# Data files — do not push (CC-BY-NC-4.0, large files)
+# ── Data files — do not push (CC-BY-NC-4.0, large) ──────────────────────
 data/
 *.csv
 *.parquet
 *.arrow
-*.json
 
-# HuggingFace cache
+# Blanket-ignore JSON, then re-admit project artifacts below.
+# Without the exceptions, the taxonomy and label files silently go untracked.
+*.json
+!misconception_taxonomy_v1.json
+!stage1b_pilot_results.json
+!stage1b_multilabel_verdict.json
+!stage2_results.json
+!requirements*.json
+
+# Labeling output and checkpoints are large and regenerable — keep them out.
+misconception_labels_v1.json
+stage1b_full_labels*.json
+stage1b_labels_checkpoint.json
+
+# Trained weights (regenerable from notebook 06)
+*.pt
+*.pth
+
+# ── HuggingFace cache ───────────────────────────────────────────────────
 .cache/
 ~/.cache/huggingface/
 
-# Python
+# ── Python ──────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -17,9 +34,9 @@ __pycache__/
 .venv/
 env/
 
-# Jupyter
+# ── Jupyter ─────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
 *.nbconvert.*
 
-# OS
+# ── OS ──────────────────────────────────────────────────────────────────
 .DS_Store

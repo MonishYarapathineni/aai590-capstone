@@ -1,0 +1,146 @@
+{
+  "generated_utc": "2026-07-31T20:22:14Z",
+  "source_corpus": "Eedi \u2014 Mining Misconceptions in Mathematics (Kaggle)",
+  "source_n_descriptions": 2587,
+  "taxonomy_model": "claude-opus-5",
+  "n_runs_for_stability": 3,
+  "category_counts_across_runs": [
+    8,
+    7,
+    8
+  ],
+  "selected_run": 0,
+  "taxonomy": {
+    "n_categories": 8,
+    "rationale_for_count": "Sorting the corpus by 'what went wrong' rather than 'what topic' reveals eight recurring failure modes that persist across arithmetic, algebra, geometry and statistics: (1) the language/symbol layer, (2) the stored-fact layer, (3) execution of a known algorithm, (4) illegitimate transfer of a rule to a context where it does not hold, (5) the meaning of the underlying object or relationship, (6) extracting information from a representation, (7) spatial visualisation and appearance-based inference, and (8) reading the task itself and monitoring what was asked. Collapsing to six forces two damaging merges: terminology-vs-fact recall (vocabulary discrimination work vs. retrieval/derivation practice) and representation-reading-vs-spatial-visualisation (careful data extraction routines vs. manipulatives and dynamic geometry) \u2014 each pair demands genuinely different lessons. Going beyond eight would split categories that share an instructional response (e.g. splitting procedural slips into 'omission' vs. 'wrong step', both remedied by worked-example comparison and self-checking).",
+    "categories": [
+      {
+        "name": "Terminology & Notation Confusion",
+        "definition": "The student's error is located in mathematical language, labels, symbols or conventions: two named objects are swapped, a term's meaning is unknown, or a notational convention is misread or misused. The underlying arithmetic or reasoning may be fine once the label is fixed.",
+        "distinguishing_test": "If you told the student what the word, letter, label or symbol means, would the error disappear? If yes, it is terminology/notation; if they would still misremember a numerical rule or property, it is Faulty Fact or Formula Recall.",
+        "instructional_response": "Explicit vocabulary and notation instruction: side-by-side examples/non-examples of the confused pair, concept cards, always-sometimes-never sorting of definitions, and insisting students read notation aloud correctly before computing.",
+        "example_misconceptions": [
+          "Confuses the terms edges and vertices",
+          "Does not know the meaning of the word parallel",
+          "Confuses a formula with an expression",
+          "Does not know the term 'diameter'",
+          "Uses more than 3 letters to describe an angle"
+        ],
+        "estimated_share": 0.11
+      },
+      {
+        "name": "Faulty Fact or Formula Recall",
+        "definition": "The student attempts the right kind of reasoning but retrieves a wrong, half-remembered or invented fact: an angle sum, a unit conversion, a formula, a property of a shape or number type, or a standard result.",
+        "distinguishing_test": "Could the error be corrected by supplying a single correct fact, formula or property from a reference sheet, with no change to the student's method or interpretation? If so, this category.",
+        "instructional_response": "Spaced retrieval practice and self-quizzing on the specific fact set, plus derivation activities so the fact can be rebuilt rather than guessed (e.g. tearing triangle corners, building the conversion staircase, deriving the trapezium formula).",
+        "example_misconceptions": [
+          "Believes angles in a triangle sum to 360 degrees",
+          "Thinks there are 100 seconds in a minute",
+          "Does not know the formula for area of a trapezium",
+          "Does not know the properties of a rhombus",
+          "Believes 1 is a prime number"
+        ],
+        "estimated_share": 0.15
+      },
+      {
+        "name": "Corrupted Procedure Execution",
+        "definition": "The student is using the correct procedure for the task but executes it with a broken, mis-ordered, incomplete or omitted step: carrying/borrowing, place-value alignment, priority of operations, inverse steps when solving, rounding routines, or stopping before the procedure is finished.",
+        "distinguishing_test": "Is the chosen method appropriate, with the fault lying in how the steps were carried out or sequenced? If instead an inappropriate rule was imported from elsewhere, it is Invalid Rule Generalisation.",
+        "instructional_response": "Worked-example/faded-example comparison, correct-vs-incorrect worked pairs for error spotting, step-labelled scaffolds and a routine of checking each step (and completing the final step) before answering.",
+        "example_misconceptions": [
+          "Forgets to carry the tens when doing column multiplication",
+          "When solving an equation, subtracts instead of dividing",
+          "Carries out operations from left to right regardless of priority order",
+          "Forgot to simplify the fraction",
+          "When \u201cborrowing\u201d during a subtraction problem, does not subtract one from the preceding digit"
+        ],
+        "estimated_share": 0.19
+      },
+      {
+        "name": "Invalid Rule Generalisation",
+        "definition": "The student imports a rule or pattern that is valid elsewhere into a situation where it does not hold: operating on parts separately, assuming linearity, assuming commutativity/distributivity, over-applied sign or index rules, or treating multiplicative structures additively.",
+        "distinguishing_test": "Can you name a context where the student's rule IS correct, and show that the current context violates its conditions? If yes, this category; if the student's rule is simply the meaning of the object being wrong, use Conceptual Meaning Error.",
+        "instructional_response": "Confront the rule with well-chosen counterexamples and boundary cases; make the conditions of validity explicit ('this works when\u2026, it fails when\u2026'), and have students state the domain of every rule they use.",
+        "example_misconceptions": [
+          "When adding fractions, adds the numerators and denominators",
+          "Believes multiplying two negatives gives a negative answer",
+          "Thinks the sum of 2 numbers, each squared first, is the same as adding the two numbers and then squaring the total",
+          "Adds rather than multiplies when scaling up in direct proportion problems",
+          "Believes that the square root of an expression square roots each term in the expression, rather than square rooting the whole expression"
+        ],
+        "estimated_share": 0.17
+      },
+      {
+        "name": "Conceptual Meaning Error",
+        "definition": "The student misconceives what a mathematical object, relationship or measure actually represents \u2014 place value, equivalence, what a fraction/ratio/probability/average/gradient means, the balance of an equation, or the role of a variable.",
+        "distinguishing_test": "Would the student give an incoherent explanation of what the quantity or symbol MEANS (not just what to do with it)? Facts and procedures are secondary here; the mental model of the object itself is wrong.",
+        "instructional_response": "Rebuild meaning with multiple representations and models (bar models, area models, balance scales, number lines, physical partitioning), moving between representation and symbol, before any procedural practice.",
+        "example_misconceptions": [
+          "Does not understand a denominator represents equal parts",
+          "Does not realise that to maintain balance in an equation they must add or subtract the same amount from both sides",
+          "Does not understand place value within a number",
+          "Believes a variable must remain unknown and cannot be substituted with a value",
+          "Does not understand that a probability of 0 represents something that is impossible"
+        ],
+        "estimated_share": 0.14
+      },
+      {
+        "name": "Representation Misreading",
+        "definition": "The error occurs when extracting information from a given representation \u2014 graph, axis, scale, protractor, number line, table, pie chart, pictogram, Venn diagram or stem-and-leaf \u2014 rather than in the mathematics performed afterwards.",
+        "distinguishing_test": "If you handed the student the correctly read values in words, would their subsequent work be sound? If yes, the fault is in reading the representation, not in the concept or procedure.",
+        "instructional_response": "Teach an explicit reading routine: identify axes/keys/units and the value of one interval before answering; practise deliberately varied and unhelpful scales, unlabelled gridlines and missing keys.",
+        "example_misconceptions": [
+          "Misreads scale",
+          "When reading value from graph, reads from the wrong axes.",
+          "Reads the wrong scale on the protractor when measuring acute angles",
+          "Assumes value of symbols in a pictogram without checking the key",
+          "When reading decimals on a number line, assumes each dash is 0.1"
+        ],
+        "estimated_share": 0.1
+      },
+      {
+        "name": "Appearance-Based Spatial Reasoning",
+        "definition": "The student reasons from how a figure looks or fails to visualise/track objects in space: assuming properties because the diagram appears that way, estimating instead of calculating, or losing control of transformations, nets, elevations and 3D structure.",
+        "distinguishing_test": "Does the error stem from trusting the visual impression of a figure, or from an inability to mentally manipulate/construct a shape? If the student instead misapplies a stated geometric fact, use Faulty Fact Recall.",
+        "instructional_response": "Use physical models, tracing paper, mirrors, isometric/net construction and dynamic geometry so students test appearance against measurement; enforce 'diagram not to scale \u2014 justify from properties, not looks'.",
+        "example_misconceptions": [
+          "Assumes triangles are isosceles if they look like they are isosceles",
+          "Struggles to visualise nets of 3D shapes",
+          "Struggles to visualise the new position of an object after transformations",
+          "Assumes an angle is the size that it looks in the (not to scale) diagram",
+          "Thinks angles which look the same on diagram will be equal"
+        ],
+        "estimated_share": 0.05
+      },
+      {
+        "name": "Task Interpretation & Monitoring",
+        "definition": "The student mathematics may be executable, but they answer a different question from the one posed: mis-translating wording into operations, ignoring command words or context, computing a related-but-wrong quantity, or giving the answer in an unusable form.",
+        "distinguishing_test": "Is the work internally valid but aimed at the wrong target (or unfinished/wrongly presented) once compared with what the question actually asked? If so, this category rather than a broken method.",
+        "instructional_response": "Comprehension-first routines: restate the question in the student's own words, underline what must be reported and in what units, predict/estimate the answer, then check the final answer against the question before submitting.",
+        "example_misconceptions": [
+          "Multiplies rather than adds when answering worded problems",
+          "Calculates perimeter when asked for area",
+          "In a worded problem, does not complete all calculations",
+          "Finds the mean instead of the median",
+          "Ignores numbers written as words in worded questions, and just calculates using those written in digits"
+        ],
+        "estimated_share": 0.09
+      }
+    ]
+  },
+  "validation": {
+    "n_assigned": 2587,
+    "distribution": {
+      "Faulty Fact or Formula Recall": 565,
+      "Corrupted Procedure Execution": 447,
+      "Invalid Rule Generalisation": 256,
+      "Representation Misreading": 123,
+      "Conceptual Meaning Error": 546,
+      "Appearance-Based Spatial Reasoning": 100,
+      "Terminology & Notation Confusion": 388,
+      "Task Interpretation & Monitoring": 162
+    },
+    "unassignable_share": 0.0,
+    "largest_category_share": 0.21839969076149982
+  }
+}

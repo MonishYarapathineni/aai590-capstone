@@ -1,4 +1,4 @@
-# ── Core: data loading & EDA (Notebook 01) ────────────────────────────
+# ── Data loading and EDA (notebook 01) ─────────────────────────────────
 datasets>=2.20.0
 huggingface_hub>=0.23.0
 pandas>=2.1.0
@@ -6,17 +6,19 @@ numpy>=1.26.0
 matplotlib>=3.8.0
 seaborn>=0.13.0
 
+# ── Stage 1: taxonomy + labeling (notebooks 02-05) ─────────────────────
+anthropic>=0.40.0        # requires ANTHROPIC_API_KEY
+kagglehub>=0.3.0         # Eedi corpus download (notebook 02)
+
+# ── Stage 2: LSTM sequence classifier (notebook 06) ────────────────────
+# For GPU or Apple Silicon builds, install torch from pytorch.org instead.
+torch>=2.3.0
+scikit-learn>=1.4.0      # roc_auc_score
+
 # ── Jupyter runtime ────────────────────────────────────────────────────
 jupyterlab>=4.0.0
 ipykernel>=6.29.0
 nbformat>=5.9.0
 
-# ── Upcoming: Stage 1 — offline misconception labeling ────────────────
-# openai>=1.30.0
-# transformers>=4.41.0
-# accelerate>=0.30.0
-
-# ── Upcoming: Stage 2 — LSTM sequence classifier ─────────────────────
-# torch>=2.3.0          # install via pytorch.org for GPU/MPS variant
-# scikit-learn>=1.4.0
-# tqdm>=4.66.0
+# Note: Google Colab pre-installs most of the above. Each notebook installs
+# what it needs in its first cell, so this file is for local runs.
