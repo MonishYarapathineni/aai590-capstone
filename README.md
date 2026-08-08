@@ -153,7 +153,6 @@ to generalise to students it has not seen.
   unstable between passes, which caps achievable performance
 - Problem text was excluded from model inputs to keep the sequential question
   uncontaminated; including it would likely raise the single-interaction baseline
-- Reported figures use initial hyperparameters, not a tuned configuration
 - No comparison against published knowledge-tracing systems
 
 ---
